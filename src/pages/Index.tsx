@@ -96,10 +96,13 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?q=80&w=2070)',
-            filter: 'brightness(0.3)'
+            backgroundImage: 'url(https://cdn.poehali.dev/projects/2fabbbd2-b618-4e38-b577-b0de88fc53fb/files/dde50d7a-031e-457f-a139-db3a935ac6c3.jpg)'
           }}
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+        <div className="absolute inset-0" style={{
+          background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.4) 100%)'
+        }} />
         <div className="relative z-10 text-center px-4 animate-fade-in max-w-4xl">
           <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-6 py-1.5 sm:py-2 border border-gold rounded-full">
             <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-gold text-xs sm:text-sm font-light tracking-wide sm:tracking-widest">
