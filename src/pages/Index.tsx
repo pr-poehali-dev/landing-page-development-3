@@ -91,7 +91,26 @@ const Index = () => {
   const totalPrice = selectedWatchData ? selectedWatchData.price + servicesPrice : 0;
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white relative">
+      <a
+        href="https://t.me/chernikovpsiholog"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 group"
+      >
+        <div className="relative">
+          <div className="absolute inset-0 bg-gold rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity animate-pulse" />
+          <Button 
+            size="lg"
+            className="relative bg-gold hover:bg-gold/90 text-black rounded-full w-14 h-14 sm:w-16 sm:h-16 shadow-2xl shadow-gold/50 hover:scale-110 transition-all duration-300 flex items-center justify-center p-0"
+          >
+            <Icon name="MessageCircle" size={24} className="sm:w-7 sm:h-7" />
+          </Button>
+        </div>
+        <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-gold text-black text-xs sm:text-sm font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+          Написать в поддержку
+        </div>
+      </a>
       <section className="relative min-h-screen h-auto sm:h-screen flex items-center justify-center overflow-hidden py-12 sm:py-0">
         <div 
           className="absolute inset-0 bg-cover bg-center"
