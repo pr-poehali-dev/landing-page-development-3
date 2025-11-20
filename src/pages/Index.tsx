@@ -92,7 +92,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen h-auto sm:h-screen flex items-center justify-center overflow-hidden py-12 sm:py-0">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -100,29 +100,29 @@ const Index = () => {
             filter: 'brightness(0.3)'
           }}
         />
-        <div className="relative z-10 text-center px-4 animate-fade-in">
-          <div className="inline-block mb-4 px-6 py-2 border border-gold rounded-full">
-            <div className="flex items-center gap-2 text-gold text-sm font-light tracking-widest">
-              <Icon name="Check" size={16} />
-              <span>Официальный дилер</span>
-              <Icon name="Check" size={16} />
-              <span>Гарантия 5 лет</span>
-              <Icon name="Check" size={16} />
-              <span>Сертификаты</span>
+        <div className="relative z-10 text-center px-4 animate-fade-in max-w-4xl">
+          <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-6 py-1.5 sm:py-2 border border-gold rounded-full">
+            <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-gold text-xs sm:text-sm font-light tracking-wide sm:tracking-widest">
+              <Icon name="Check" size={14} className="sm:w-4 sm:h-4" />
+              <span className="whitespace-nowrap">Официальный дилер</span>
+              <Icon name="Check" size={14} className="hidden xs:inline sm:w-4 sm:h-4" />
+              <span className="hidden xs:inline whitespace-nowrap">Гарантия 5 лет</span>
+              <Icon name="Check" size={14} className="hidden sm:inline" />
+              <span className="hidden sm:inline">Сертификаты</span>
             </div>
           </div>
-          <h1 className="text-7xl md:text-9xl font-bold mb-6 tracking-wider text-gold">
+          <h1 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4 sm:mb-6 tracking-wider text-gold leading-tight">
             HUBLOT
           </h1>
-          <p className="text-2xl md:text-3xl font-light mb-8 tracking-wide">
+          <p className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-light mb-4 sm:mb-8 tracking-wide px-2">
             Искусство синхронизации и точности
           </p>
-          <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto px-2">
             Эксклюзивные часы, созданные для тех, кто ценит совершенство
           </p>
           <Button 
             size="lg" 
-            className="bg-gold hover:bg-gold/90 text-black font-semibold text-lg px-12 py-6 rounded-sm"
+            className="bg-gold hover:bg-gold/90 text-black font-semibold text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-sm w-full xs:w-auto"
             onClick={() => document.getElementById('collection')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Открыть коллекцию
@@ -130,16 +130,16 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="collection" className="py-24 px-4 bg-white text-black">
+      <section id="collection" className="py-12 sm:py-16 md:py-24 px-3 sm:px-4 bg-white text-black">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-5xl md:text-6xl font-bold mb-4">Выберите свой стиль</h2>
-            <p className="text-xl text-gray-600">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-slide-up">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold mb-3 sm:mb-4 px-2">Выберите свой стиль</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 px-4">
               Три уникальные коллекции для трех типов людей
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 md:mb-24">
             {watches.map((watch, index) => (
               <Card 
                 key={watch.id} 
@@ -150,31 +150,31 @@ const Index = () => {
                   <img 
                     src={watch.image} 
                     alt={watch.name}
-                    className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 xs:h-64 sm:h-72 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 right-4 bg-gold text-black px-4 py-2 font-semibold rounded-sm">
+                  <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-gold text-black px-2 sm:px-4 py-1 sm:py-2 font-semibold rounded-sm text-xs sm:text-base">
                     {watch.badge}
                   </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold">{watch.name}</CardTitle>
-                  <CardDescription className="text-base">{watch.description}</CardDescription>
+                <CardHeader className="p-3 sm:p-6">
+                  <CardTitle className="text-lg xs:text-xl sm:text-2xl font-bold">{watch.name}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base">{watch.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 mb-6">
+                <CardContent className="p-3 sm:p-6 pt-0">
+                  <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     {watch.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm">
-                        <Icon name="Check" size={16} className="text-gold flex-shrink-0" />
+                      <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm">
+                        <Icon name="Check" size={14} className="text-gold flex-shrink-0 sm:w-4 sm:h-4" />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-baseline gap-3 mb-6">
-                    <span className="text-3xl font-bold text-gold">${watch.price.toLocaleString()}</span>
-                    <span className="text-lg text-gray-400 line-through">${watch.originalPrice.toLocaleString()}</span>
+                  <div className="flex flex-wrap items-baseline gap-2 sm:gap-3 mb-4 sm:mb-6">
+                    <span className="text-2xl sm:text-3xl font-bold text-gold">${watch.price.toLocaleString()}</span>
+                    <span className="text-base sm:text-lg text-gray-400 line-through">${watch.originalPrice.toLocaleString()}</span>
                   </div>
                   <Button 
-                    className="w-full bg-black hover:bg-gold hover:text-black transition-colors font-semibold"
+                    className="w-full bg-black hover:bg-gold hover:text-black transition-colors font-semibold text-sm sm:text-base py-5 sm:py-6"
                     onClick={() => handleOrderClick(watch.id)}
                   >
                     Узнать подробнее
@@ -184,19 +184,19 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center">
             {[
               { icon: 'Timer', title: 'Точность', desc: 'Швейцарская точность каждой модели' },
               { icon: 'Crown', title: 'Престиж', desc: 'Выбор королей и знаменитостей мира' },
               { icon: 'Award', title: 'Качество', desc: 'Материалы премиум класса и мастерство' },
               { icon: 'Infinity', title: 'Вечность', desc: 'Часы передаются из поколения в поколение' }
             ].map((item, idx) => (
-              <div key={idx} className="p-6">
-                <div className="text-4xl mb-4 flex justify-center">
-                  <Icon name={item.icon as any} size={48} className="text-gold" />
+              <div key={idx} className="p-3 sm:p-4 md:p-6">
+                <div className="text-3xl sm:text-4xl mb-2 sm:mb-4 flex justify-center">
+                  <Icon name={item.icon as any} size={32} className="text-gold sm:w-12 sm:h-12" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2">{item.title}</h3>
+                <p className="text-xs sm:text-sm md:text-base text-gray-600">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -204,78 +204,78 @@ const Index = () => {
       </section>
 
       {showCheckout && selectedWatchData && (
-        <section id="checkout" className="py-24 px-4 bg-black">
+        <section id="checkout" className="py-12 sm:py-16 md:py-24 px-3 sm:px-4 bg-black">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in">
-              <h2 className="text-5xl font-bold mb-4 text-gold">Ваш заказ почти готов</h2>
-              <p className="text-xl text-gray-300">
+            <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+              <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold mb-3 sm:mb-4 text-gold px-2">Ваш заказ почти готов</h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 px-4">
                 Выполните последние шаги для получения часов мечты
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 md:space-y-8">
               <Card className="bg-white/5 border-gold/20">
-                <CardHeader>
-                  <CardTitle className="text-gold">Информация о заказе</CardTitle>
+                <CardHeader className="p-4 sm:p-6">
+                  <CardTitle className="text-gold text-lg sm:text-xl">Информация о заказе</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6">
                   <div>
-                    <Label className="text-white">Выбранная модель</Label>
+                    <Label className="text-white text-sm sm:text-base">Выбранная модель</Label>
                     <Input 
                       value={selectedWatchData.name} 
                       readOnly 
-                      className="bg-white/10 border-gold/30 text-white mt-2"
+                      className="bg-white/10 border-gold/30 text-white mt-2 text-sm sm:text-base"
                     />
                   </div>
                   <div>
-                    <Label className="text-white">Итоговая стоимость</Label>
+                    <Label className="text-white text-sm sm:text-base">Итоговая стоимость</Label>
                     <Input 
                       value={`$${totalPrice.toLocaleString()}`}
                       readOnly 
-                      className="bg-white/10 border-gold/30 text-gold font-bold text-xl mt-2"
+                      className="bg-white/10 border-gold/30 text-gold font-bold text-lg sm:text-xl mt-2"
                     />
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="bg-white/5 border-gold/20">
-                <CardHeader>
-                  <CardTitle className="text-gold">Информация покупателя</CardTitle>
+                <CardHeader className="p-4 sm:p-6">
+                  <CardTitle className="text-gold text-lg sm:text-xl">Информация покупателя</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6">
                   <div>
-                    <Label htmlFor="name" className="text-white">Полное имя *</Label>
+                    <Label htmlFor="name" className="text-white text-sm sm:text-base">Полное имя *</Label>
                     <Input 
                       id="name" 
                       placeholder="Иван Петров" 
                       required 
-                      className="bg-white/10 border-gold/30 text-white mt-2"
+                      className="bg-white/10 border-gold/30 text-white mt-2 text-sm sm:text-base"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-white">Email *</Label>
+                    <Label htmlFor="email" className="text-white text-sm sm:text-base">Email *</Label>
                     <Input 
                       id="email" 
                       type="email" 
                       placeholder="ivan@example.com" 
                       required 
-                      className="bg-white/10 border-gold/30 text-white mt-2"
+                      className="bg-white/10 border-gold/30 text-white mt-2 text-sm sm:text-base"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone" className="text-white">Телефон *</Label>
+                    <Label htmlFor="phone" className="text-white text-sm sm:text-base">Телефон *</Label>
                     <Input 
                       id="phone" 
                       type="tel" 
                       placeholder="+7 (999) 999-99-99" 
                       required 
-                      className="bg-white/10 border-gold/30 text-white mt-2"
+                      className="bg-white/10 border-gold/30 text-white mt-2 text-sm sm:text-base"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="country" className="text-white">Страна *</Label>
+                    <Label htmlFor="country" className="text-white text-sm sm:text-base">Страна *</Label>
                     <Select required>
-                      <SelectTrigger className="bg-white/10 border-gold/30 text-white mt-2">
+                      <SelectTrigger className="bg-white/10 border-gold/30 text-white mt-2 text-sm sm:text-base">
                         <SelectValue placeholder="Выберите страну" />
                       </SelectTrigger>
                       <SelectContent>
@@ -288,24 +288,24 @@ const Index = () => {
                     </Select>
                   </div>
                   <div>
-                    <Label htmlFor="address" className="text-white">Адрес доставки *</Label>
+                    <Label htmlFor="address" className="text-white text-sm sm:text-base">Адрес доставки *</Label>
                     <Textarea 
                       id="address" 
                       placeholder="Город, улица, дом, квартира" 
                       required 
-                      className="bg-white/10 border-gold/30 text-white mt-2"
+                      className="bg-white/10 border-gold/30 text-white mt-2 text-sm sm:text-base min-h-[80px]"
                     />
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="bg-white/5 border-gold/20">
-                <CardHeader>
-                  <CardTitle className="text-gold">Способ оплаты</CardTitle>
+                <CardHeader className="p-4 sm:p-6">
+                  <CardTitle className="text-gold text-lg sm:text-xl">Способ оплаты</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6">
                   <Select value={paymentMethod} onValueChange={setPaymentMethod} required>
-                    <SelectTrigger className="bg-white/10 border-gold/30 text-white">
+                    <SelectTrigger className="bg-white/10 border-gold/30 text-white text-sm sm:text-base">
                       <SelectValue placeholder="Выберите способ оплаты" />
                     </SelectTrigger>
                     <SelectContent>
@@ -316,22 +316,22 @@ const Index = () => {
                   </Select>
 
                   {paymentMethod === 'card' && (
-                    <div className="space-y-4 animate-fade-in">
+                    <div className="space-y-3 sm:space-y-4 animate-fade-in">
                       <Input 
                         placeholder="Номер карты: 1234 5678 9012 3456" 
-                        className="bg-white/10 border-gold/30 text-white"
+                        className="bg-white/10 border-gold/30 text-white text-sm sm:text-base"
                         required
                       />
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-2 gap-3 sm:gap-4">
                         <Input 
                           placeholder="MM/YY" 
-                          className="bg-white/10 border-gold/30 text-white"
+                          className="bg-white/10 border-gold/30 text-white text-sm sm:text-base"
                           required
                         />
                         <Input 
                           type="password" 
                           placeholder="CVV" 
-                          className="bg-white/10 border-gold/30 text-white"
+                          className="bg-white/10 border-gold/30 text-white text-sm sm:text-base"
                           required
                         />
                       </div>
@@ -341,65 +341,68 @@ const Index = () => {
               </Card>
 
               <Card className="bg-white/5 border-gold/20">
-                <CardHeader>
-                  <CardTitle className="text-gold">Дополнительные услуги</CardTitle>
+                <CardHeader className="p-4 sm:p-6">
+                  <CardTitle className="text-gold text-lg sm:text-xl">Дополнительные услуги</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start space-x-3">
+                <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6">
+                  <div className="flex items-start space-x-2 sm:space-x-3">
                     <Checkbox 
                       id="insurance"
                       checked={additionalServices.insurance}
                       onCheckedChange={(checked) => 
                         setAdditionalServices(prev => ({ ...prev, insurance: checked as boolean }))
                       }
+                      className="mt-1"
                     />
                     <div className="flex-1">
-                      <Label htmlFor="insurance" className="text-white font-semibold cursor-pointer">
+                      <Label htmlFor="insurance" className="text-white font-semibold cursor-pointer text-sm sm:text-base">
                         Страховка часов — $500
                       </Label>
-                      <p className="text-sm text-gray-400">Полная страховка на 3 года</p>
+                      <p className="text-xs sm:text-sm text-gray-400">Полная страховка на 3 года</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-3">
+                  <div className="flex items-start space-x-2 sm:space-x-3">
                     <Checkbox 
                       id="engraving"
                       checked={additionalServices.engraving}
                       onCheckedChange={(checked) => 
                         setAdditionalServices(prev => ({ ...prev, engraving: checked as boolean }))
                       }
+                      className="mt-1"
                     />
                     <div className="flex-1">
-                      <Label htmlFor="engraving" className="text-white font-semibold cursor-pointer">
+                      <Label htmlFor="engraving" className="text-white font-semibold cursor-pointer text-sm sm:text-base">
                         Гравировка — $150
                       </Label>
-                      <p className="text-sm text-gray-400">Персональная гравировка на корпусе</p>
+                      <p className="text-xs sm:text-sm text-gray-400">Персональная гравировка на корпусе</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-3">
+                  <div className="flex items-start space-x-2 sm:space-x-3">
                     <Checkbox 
                       id="giftBox"
                       checked={additionalServices.giftBox}
                       onCheckedChange={(checked) => 
                         setAdditionalServices(prev => ({ ...prev, giftBox: checked as boolean }))
                       }
+                      className="mt-1"
                     />
                     <div className="flex-1">
-                      <Label htmlFor="giftBox" className="text-white font-semibold cursor-pointer">
+                      <Label htmlFor="giftBox" className="text-white font-semibold cursor-pointer text-sm sm:text-base">
                         Премиум упаковка — $200
                       </Label>
-                      <p className="text-sm text-gray-400">Роскошная подарочная коробка</p>
+                      <p className="text-xs sm:text-sm text-gray-400">Роскошная подарочная коробка</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-3 sm:gap-4">
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="flex-1 bg-gold hover:bg-gold/90 text-black font-bold text-lg py-6"
+                  className="w-full bg-gold hover:bg-gold/90 text-black font-bold text-base sm:text-lg py-5 sm:py-6"
                 >
                   Завершить покупку
                 </Button>
@@ -411,18 +414,18 @@ const Index = () => {
                     setShowCheckout(false);
                     document.getElementById('collection')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="flex-1 border-gold text-gold hover:bg-gold hover:text-black font-semibold py-6"
+                  className="w-full border-gold text-gold hover:bg-gold hover:text-black font-semibold py-5 sm:py-6 text-base sm:text-lg"
                 >
                   Вернуться в каталог
                 </Button>
               </div>
 
-              <div className="text-center text-gray-400 text-sm space-y-2">
+              <div className="text-center text-gray-400 text-xs sm:text-sm space-y-2">
                 <p className="flex items-center justify-center gap-2">
-                  <Icon name="Lock" size={16} className="text-gold" />
+                  <Icon name="Lock" size={14} className="text-gold sm:w-4 sm:h-4" />
                   Защищенная транзакция
                 </p>
-                <p>support@hublot-shop.ru | Пн-Сб: 10:00-20:00 (МСК)</p>
+                <p className="px-2">support@hublot-shop.ru<br className="sm:hidden" /><span className="hidden sm:inline"> | </span>Пн-Сб: 10:00-20:00 (МСК)</p>
               </div>
             </form>
           </div>
