@@ -22,10 +22,10 @@ const Header = ({ count, onOpenCart }: { count: number; onOpenCart: () => void }
     <header className={'hdr' + (scrolled ? ' scrolled' : '')}>
       <div className="wrap hdr-in">
         <a className="logo" href="#top">
-          <span className="logo-mark">Ц</span>
+          <img className="logo-mark" src="/logo-mark.png" alt="Нейро цех" />
           <span>
-            <span className="logo-name">ЦЕХ</span>
-            <span className="logo-sub">бюро цифровых услуг</span>
+            <span className="logo-name">НЕЙРО ЦЕХ</span>
+            <span className="logo-sub">хакни нейросети</span>
           </span>
         </a>
         <nav className="nav">

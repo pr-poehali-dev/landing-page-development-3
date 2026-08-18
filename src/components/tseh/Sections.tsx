@@ -51,7 +51,7 @@ export const Stats = () => {
 };
 
 export const Process = () => (
-  <section className="sec" id="process" style={{ borderTop: '1px solid rgba(21,22,26,.15)' }}>
+  <section className="sec" id="process" style={{ borderTop: '1px solid rgba(16,35,61,.15)' }}>
     <div className="wrap process-grid">
       <div className="proc-sticky">
         <div className="reveal">
@@ -60,12 +60,12 @@ export const Process = () => (
           <p className="proc-lead">Никаких «погружений на две недели». Пять этапов, у каждого — срок и артефакт: договор, демо, акт. Вы всегда знаете, что происходит с задачей и почему.</p>
         </div>
         <div className="proc-card reveal">
-          <span className="proc-avatar">ГК</span>
+          <img className="proc-avatar" src="/neira.png" alt="Нейра" />
           <div>
-            <p>Глеб Кузнецов — продюсер</p>
+            <p>Нейра — куратор цеха</p>
             <p>ведёт проект от заявки до приёмки, на связи в телеграме</p>
           </div>
-          <a className="proc-tg" href="https://t.me/tseh_buro" target="_blank" rel="noreferrer" aria-label="Телеграм продюсера"><IconTelegram /></a>
+          <a className="proc-tg" href="https://t.me/neuro_tseh" target="_blank" rel="noreferrer" aria-label="Телеграм продюсера"><IconTelegram /></a>
         </div>
       </div>
       <div className="steps">
@@ -157,12 +157,12 @@ export const Reviews = () => (
             </figcaption>
           </figure>
         ))}
-        <a className="rev-tg reveal" href="https://t.me/tseh_buro" target="_blank" rel="noreferrer">
+        <a className="rev-tg reveal" href="https://t.me/neuro_tseh" target="_blank" rel="noreferrer">
           <div>
             <p className="big">4.9<small>/5</small></p>
             <p>Остальные отзывы — в закрепе телеграм-канала, вместе с факапами и выводами. Честнее не найдёте.</p>
           </div>
-          <span className="go"><IconTelegram />@tseh_buro<i /></span>
+          <span className="go"><IconTelegram />@neuro_tseh<i /></span>
         </a>
       </div>
     </div>
@@ -172,7 +172,7 @@ export const Reviews = () => (
 export const Faq = () => {
   const [open, setOpen] = useState(0);
   return (
-    <section className="sec" id="faq" style={{ borderTop: '1px solid rgba(21,22,26,.15)' }}>
+    <section className="sec" id="faq" style={{ borderTop: '1px solid rgba(16,35,61,.15)' }}>
       <div className="wrap faq-grid">
         <div className="faq-side">
           <div className="reveal">
@@ -180,7 +180,7 @@ export const Faq = () => {
             <h2 className="sec-title">Спрашивают<br />до оплаты</h2>
             <p className="faq-lead">Семь вопросов, которые задают чаще всего — от «почему фикс-прайс» до законности нейрофото. Остальное — в телеграме: отвечаем быстрее, чем сохнет краска на вывеске.</p>
           </div>
-          <a className="btn btn-ghost reveal" style={{ marginTop: 32 }} href="https://t.me/tseh_buro" target="_blank" rel="noreferrer">
+          <a className="btn btn-ghost reveal" style={{ marginTop: 32 }} href="https://t.me/neuro_tseh" target="_blank" rel="noreferrer">
             <IconTelegram />Задать свой вопрос
           </a>
         </div>
@@ -208,7 +208,7 @@ export const Cta = ({ onOpenCart }: { onOpenCart: () => void }) => (
   <section className="cta">
     <div className="wrap cta-in">
       <div className="reveal">
-        <p className="sec-label" style={{ color: 'rgba(21,22,26,.7)' }}>06 / Финал — он же начало</p>
+        <p className="sec-label" style={{ color: 'rgba(16,35,61,.7)' }}>06 / Финал — он же начало</p>
         <h2>Есть задача?<br />Жмите.</h2>
         <div className="trust">
           <span><IconBolt size={15} />старт от 3 дней</span>
@@ -216,10 +216,11 @@ export const Cta = ({ onOpenCart }: { onOpenCart: () => void }) => (
         </div>
       </div>
       <div className="cta-card reveal">
+        <img className="cta-neira" src="/neira.png" alt="Нейра" />
         <p className="k">Наряд-заказ · 3 минуты</p>
         <p>Соберите корзину из прейскуранта — цена посчитается сама, а менеджер подтвердит смету в течение рабочего часа.</p>
         <button className="btn btn-signal" onClick={onOpenCart}>Собрать заявку <IconArrow size={17} /></button>
-        <a className="tg-line" href="https://t.me/tseh_buro" target="_blank" rel="noreferrer">
+        <a className="tg-line" href="https://t.me/neuro_tseh" target="_blank" rel="noreferrer">
           <IconTelegram size={16} />или сразу в телеграм
         </a>
         <p className="small">Без предоплаты на этом шаге. Деньги — после договора.</p>
@@ -231,10 +232,10 @@ export const Cta = ({ onOpenCart }: { onOpenCart: () => void }) => (
 export const Footer = () => (
   <footer>
     <div className="wrap">
-      <a className="foot-word" href="#top" aria-label="Наверх">ЦЕХ</a>
+      <a className="foot-word" href="#top" aria-label="Наверх">НЕЙРО ЦЕХ</a>
       <div className="foot-grid">
         <div>
-          <p className="foot-h">Бюро цифровых услуг</p>
+          <p className="foot-h">Нейро цех — бюро цифровых услуг</p>
           <p className="foot-p">Продаём сайты, приложения, игры и медиа как товар: с ценником, сроком и гарантией. Штат 14 человек, без субподряда.</p>
         </div>
         <div>
@@ -250,14 +251,14 @@ export const Footer = () => (
         <div>
           <p className="foot-h">Контакты</p>
           <ul>
-            <li><a href="https://t.me/tseh_buro" target="_blank" rel="noreferrer"><IconTelegram size={15} />@tseh_buro</a></li>
-            <li><a href="mailto:zakaz@tseh.buro"><IconMail />zakaz@tseh.buro</a></li>
+            <li><a href="https://t.me/neuro_tseh" target="_blank" rel="noreferrer"><IconTelegram size={15} />@neuro_tseh</a></li>
+            <li><a href="mailto:zakaz@neuro-tseh.ru"><IconMail />zakaz@neuro-tseh.ru</a></li>
             <li><a href="tel:+74951204567"><IconPhone />+7 495 120-45-67</a></li>
           </ul>
         </div>
         <div>
           <p className="foot-h">Режим работы</p>
-          <ul style={{ fontSize: 14, color: 'rgba(244,242,236,.8)' }}>
+          <ul style={{ fontSize: 14, color: 'rgba(241,246,251,.8)' }}>
             <li style={{ display: 'flex', justifyContent: 'space-between', maxWidth: 220 }}><span style={{ color: 'var(--mutdark)' }}>пн–пт</span><b>10:00–19:00 мск</b></li>
             <li style={{ display: 'flex', justifyContent: 'space-between', maxWidth: 220 }}><span style={{ color: 'var(--mutdark)' }}>сб</span><b>дежурная смена</b></li>
             <li style={{ display: 'flex', justifyContent: 'space-between', maxWidth: 220 }}><span style={{ color: 'var(--mutdark)' }}>вс</span><b>станки спят</b></li>
@@ -268,8 +269,8 @@ export const Footer = () => (
         </div>
       </div>
       <div className="foot-meta">
-        <p>© 2017–2026 ЦЕХ · Прейскурант №7 действует с 12.01.2026</p>
-        <p>Сделано в цехе, а не на шаблоне <span className="sep">◆</span> Москва — весь мир</p>
+        <p>© 2017–2026 НЕЙРО ЦЕХ · Прейскурант №7 действует с 12.01.2026</p>
+        <p>Хакнули нейросети, а не шаблон <span className="sep">◆</span> Москва — весь мир</p>
       </div>
     </div>
   </footer>

@@ -54,7 +54,7 @@ const Hero = ({ count, onOpenCart }: { count: number; onOpenCart: () => void }) 
 
   return (
     <section className="hero bg-grid" id="top">
-      <div className="wm" aria-hidden="true">ЦЕХ</div>
+      <div className="wm" aria-hidden="true">НЕЙРО</div>
       <div className="wrap hero-grid">
         <div>
           <p className="price-label"><span className="dot blink" />Прейскурант №7 · действует с 12.01.2026</p>
@@ -64,7 +64,7 @@ const Hero = ({ count, onOpenCart }: { count: number; onOpenCart: () => void }) 
             <span className="accent" ref={r3}>Результат.</span>
           </h1>
           <p className="hero-lead">
-            Цех — бюро, где digital-услуги продаются <b>как товар на витрине</b>: сайты, приложения, игры,
+            Нейро цех — бюро, где digital-услуги продаются <b>как товар на витрине</b>: сайты, приложения, игры,
             нейрофотосессии и промо-видео с фиксированной ценой, сроком в договоре и гарантией 60 дней.
             Собираете корзину — мы берём в работу.
           </p>
@@ -82,19 +82,24 @@ const Hero = ({ count, onOpenCart }: { count: number; onOpenCart: () => void }) 
         </div>
 
         <div className="board-wrap">
+          <img
+            className="neira"
+            src="/neira.png"
+            alt="Нейра — маскот Нейро цеха"
+          />
           <div className="board">
             <svg className="stamp" viewBox="0 0 100 100" aria-hidden="true">
               <defs><path id="sc" d="M50,50 m-35,0 a35,35 0 1,1 70,0 a35,35 0 1,1 -70,0" fill="none" /></defs>
-              <circle cx="50" cy="50" r="48" fill="#FF4D00" stroke="#15161A" strokeWidth="2" />
-              <circle cx="50" cy="50" r="24" fill="none" stroke="#15161A" strokeWidth="1.2" strokeDasharray="3 3" />
-              <text fill="#15161A" fontSize="8.6" fontWeight="700" letterSpacing="1.5">
+              <circle cx="50" cy="50" r="48" fill="#16D3F0" stroke="#10233D" strokeWidth="2" />
+              <circle cx="50" cy="50" r="24" fill="none" stroke="#10233D" strokeWidth="1.2" strokeDasharray="3 3" />
+              <text fill="#10233D" fontSize="8.6" fontWeight="700" letterSpacing="1.5">
                 <textPath href="#sc">ФИКС-ПРАЙС · СРОК В ДОГОВОРЕ ·</textPath>
               </text>
-              <text x="50" y="59" textAnchor="middle" fontSize="26" fontWeight="900" fill="#15161A">₽</text>
+              <text x="50" y="59" textAnchor="middle" fontSize="26" fontWeight="900" fill="#10233D">₽</text>
             </svg>
             <div className="board-head">
-              Наряд-заказ · ЦЕХ
-              <span className="board-live"><i className="blink" />цех на смене</span>
+              Наряд-заказ
+              <span className="board-live"><i className="blink" />Нейра на смене</span>
             </div>
             <dl>
               {BOARD_ROWS.map(([dt, dd]) => (

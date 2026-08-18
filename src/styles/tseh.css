@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Golos+Text:wght@400;500;600;800&display=swap");
 
 .tseh {
-  --paper: #f4f2ec;
-  --paper2: #eceade;
-  --ink: #15161a;
-  --ink2: #1e2026;
-  --line: #d8d4c8;
-  --muted: #6f6e64;
-  --mutdark: #9a9ba3;
-  --signal: #ff4d00;
+  --paper: #f1f6fb;
+  --paper2: #e3edf7;
+  --ink: #10233d;
+  --ink2: #16304f;
+  --line: #c9dcee;
+  --muted: #5d7793;
+  --mutdark: #8fb3d4;
+  --signal: #16d3f0;
   --fd: "Unbounded", "Golos Text", system-ui, sans-serif;
   --fb: "Golos Text", "Segoe UI", system-ui, sans-serif;
   background: var(--paper);
@@ -78,14 +78,14 @@ html.tseh-lock body {
 }
 .tseh .bg-grid {
   background-image:
-    linear-gradient(rgba(21, 22, 26, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(21, 22, 26, 0.055) 1px, transparent 1px);
+    linear-gradient(rgba(16, 35, 61, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 35, 61, 0.055) 1px, transparent 1px);
   background-size: 46px 46px;
 }
 .tseh .bg-grid-dark {
   background-image:
-    linear-gradient(rgba(244, 242, 236, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244, 242, 236, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(241, 246, 251, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(241, 246, 251, 0.05) 1px, transparent 1px);
   background-size: 46px 46px;
 }
 
@@ -94,14 +94,14 @@ html.tseh-lock body {
   top: 0;
   z-index: 40;
   background: var(--paper);
-  border-bottom: 1px solid rgba(21, 22, 26, 0.1);
+  border-bottom: 1px solid rgba(16, 35, 61, 0.1);
   transition:
     box-shadow 0.3s,
     border-color 0.3s;
 }
 .tseh .hdr.scrolled {
-  border-color: rgba(21, 22, 26, 0.25);
-  box-shadow: 0 2px 0 rgba(21, 22, 26, 0.08);
+  border-color: rgba(16, 35, 61, 0.25);
+  box-shadow: 0 2px 0 rgba(16, 35, 61, 0.08);
 }
 .tseh .hdr-in {
   display: flex;
@@ -117,14 +117,9 @@ html.tseh-lock body {
   text-decoration: none;
 }
 .tseh .logo-mark {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  background: var(--signal);
-  font-family: var(--fd);
-  font-weight: 900;
-  font-size: 18px;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
   transition: transform 0.3s;
 }
 .tseh .logo:hover .logo-mark {
@@ -155,7 +150,7 @@ html.tseh-lock body {
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
-  color: rgba(21, 22, 26, 0.8);
+  color: rgba(16, 35, 61, 0.8);
 }
 .tseh .nav a::after {
   content: "";
@@ -276,7 +271,7 @@ html.tseh-lock body {
 
 .tseh .hero {
   position: relative;
-  border-bottom: 1px solid rgba(21, 22, 26, 0.15);
+  border-bottom: 1px solid rgba(16, 35, 61, 0.15);
   overflow: hidden;
 }
 .tseh .hero-grid {
@@ -327,7 +322,7 @@ html.tseh-lock body {
   max-width: 560px;
   font-size: 19px;
   line-height: 1.55;
-  color: rgba(21, 22, 26, 0.78);
+  color: rgba(16, 35, 61, 0.78);
 }
 .tseh .hero-lead b {
   color: var(--ink);
@@ -372,6 +367,31 @@ html.tseh-lock body {
 .tseh .board-wrap {
   position: relative;
 }
+.tseh .neira {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .tseh .neira {
+    display: block;
+    position: absolute;
+    left: -130px;
+    bottom: -110px;
+    width: 155px;
+    z-index: 3;
+    filter: drop-shadow(0 12px 32px rgba(22, 211, 240, 0.45));
+    animation: tseh-neira 7s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+@keyframes tseh-neira {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
 .tseh .board {
   position: relative;
   max-width: 440px;
@@ -400,7 +420,7 @@ html.tseh-lock body {
   align-items: center;
   justify-content: space-between;
   padding: 16px 24px;
-  border-bottom: 1px solid rgba(244, 242, 236, 0.15);
+  border-bottom: 1px solid rgba(241, 246, 251, 0.15);
   font-family: var(--fd);
   font-size: 12px;
   font-weight: 700;
@@ -436,7 +456,7 @@ html.tseh-lock body {
   padding: 12px 0;
 }
 .tseh .board-row + .board-row {
-  border-top: 1px dashed rgba(244, 242, 236, 0.15);
+  border-top: 1px dashed rgba(241, 246, 251, 0.15);
 }
 .tseh .board-row dt {
   font-size: 14px;
@@ -450,7 +470,7 @@ html.tseh-lock body {
 }
 .tseh .board-foot {
   padding: 14px 24px;
-  border-top: 1px solid rgba(244, 242, 236, 0.15);
+  border-top: 1px solid rgba(241, 246, 251, 0.15);
   background: var(--ink2);
   font-size: 13px;
   line-height: 1.45;
@@ -463,7 +483,7 @@ html.tseh-lock body {
   width: 120px;
   height: 120px;
   animation: tseh-spin 22s linear infinite;
-  filter: drop-shadow(3px 4px 0 rgba(21, 22, 26, 0.9));
+  filter: drop-shadow(3px 4px 0 rgba(16, 35, 61, 0.9));
   pointer-events: none;
 }
 @keyframes tseh-spin {
@@ -474,8 +494,8 @@ html.tseh-lock body {
 
 .tseh .ticker {
   overflow: hidden;
-  border-top: 1px solid rgba(21, 22, 26, 0.15);
-  border-bottom: 1px solid rgba(21, 22, 26, 0.15);
+  border-top: 1px solid rgba(16, 35, 61, 0.15);
+  border-bottom: 1px solid rgba(16, 35, 61, 0.15);
   background: var(--signal);
   color: var(--ink);
   padding: 12px 0;
@@ -567,7 +587,7 @@ html.tseh-lock body {
   grid-template-columns: repeat(2, 1fr);
 }
 .tseh .stat {
-  border-left: 2px solid rgba(244, 242, 236, 0.15);
+  border-left: 2px solid rgba(241, 246, 251, 0.15);
   padding: 32px 28px;
 }
 .tseh .stat-v {
@@ -599,7 +619,7 @@ html.tseh-lock body {
   margin-bottom: 36px;
 }
 .tseh .chip {
-  border: 2px solid rgba(21, 22, 26, 0.25);
+  border: 2px solid rgba(16, 35, 61, 0.25);
   background: transparent;
   padding: 9px 18px;
   font-family: var(--fd);
@@ -627,7 +647,7 @@ html.tseh-lock body {
   gap: 20px;
   align-items: center;
   padding: 26px 0;
-  border-bottom: 1px solid rgba(21, 22, 26, 0.15);
+  border-bottom: 1px solid rgba(16, 35, 61, 0.15);
   cursor: pointer;
   transition:
     background 0.3s,
@@ -723,7 +743,7 @@ html.tseh-lock body {
   place-items: center;
   width: 44px;
   height: 44px;
-  border: 2px solid rgba(21, 22, 26, 0.3);
+  border: 2px solid rgba(16, 35, 61, 0.3);
   background: transparent;
   transition: all 0.25s;
   flex-shrink: 0;
@@ -745,7 +765,7 @@ html.tseh-lock body {
   color: var(--ink);
 }
 .tseh .svc-row:hover .add-btn {
-  border-color: rgba(244, 242, 236, 0.4);
+  border-color: rgba(241, 246, 251, 0.4);
   color: var(--paper);
 }
 .tseh .svc-row:hover .add-btn:hover {
@@ -758,7 +778,7 @@ html.tseh-lock body {
   flex-wrap: wrap;
   align-items: center;
   gap: 16px;
-  border: 2px dashed rgba(21, 22, 26, 0.35);
+  border: 2px dashed rgba(16, 35, 61, 0.35);
   padding: 20px 24px;
 }
 .tseh .custom-note p {
@@ -790,7 +810,7 @@ html.tseh-lock body {
 .tseh-overlay .overlay-bg {
   position: absolute;
   inset: 0;
-  background: rgba(21, 22, 26, 0.78);
+  background: rgba(16, 35, 61, 0.78);
   border: none;
   animation: tseh-fadeIn 0.3s both;
 }
@@ -827,7 +847,7 @@ html.tseh-lock body {
   display: grid;
   place-items: center;
   background: var(--paper);
-  border: 1px solid rgba(21, 22, 26, 0.3);
+  border: 1px solid rgba(16, 35, 61, 0.3);
   transition: all 0.2s;
 }
 .tseh-overlay .modal-close:hover {
@@ -905,7 +925,7 @@ html.tseh-lock body {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  border: 2px solid rgba(21, 22, 26, 0.2);
+  border: 2px solid rgba(16, 35, 61, 0.2);
   background: transparent;
   padding: 13px 16px;
   text-align: left;
@@ -913,7 +933,7 @@ html.tseh-lock body {
   margin-bottom: 8px;
 }
 .tseh-overlay .opt:hover {
-  border-color: rgba(21, 22, 26, 0.6);
+  border-color: rgba(16, 35, 61, 0.6);
 }
 .tseh-overlay .opt.on {
   background: var(--ink);
@@ -932,7 +952,7 @@ html.tseh-lock body {
   height: 20px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(21, 22, 26, 0.4);
+  border: 1px solid rgba(16, 35, 61, 0.4);
   flex-shrink: 0;
 }
 .tseh-overlay .opt.on .opt-box {
@@ -976,7 +996,7 @@ html.tseh-lock body {
   align-items: flex-end;
   justify-content: space-between;
   gap: 12px;
-  border-top: 1px dashed rgba(244, 242, 236, 0.25);
+  border-top: 1px dashed rgba(241, 246, 251, 0.25);
   margin-top: 18px;
   padding-top: 18px;
 }
@@ -1006,7 +1026,7 @@ html.tseh-lock body {
   justify-content: space-between;
   gap: 12px;
   background: transparent;
-  border: 2px solid rgba(244, 242, 236, 0.25);
+  border: 2px solid rgba(241, 246, 251, 0.25);
   color: var(--paper);
   padding: 13px 16px;
   transition: border-color 0.2s;
@@ -1015,7 +1035,7 @@ html.tseh-lock body {
   border-color: var(--signal);
 }
 .tseh-overlay .urgent-btn:hover {
-  border-color: rgba(244, 242, 236, 0.6);
+  border-color: rgba(241, 246, 251, 0.6);
 }
 .tseh-overlay .urgent-btn.on:hover {
   border-color: var(--signal);
@@ -1037,7 +1057,7 @@ html.tseh-lock body {
   position: relative;
   width: 44px;
   height: 24px;
-  border: 1px solid rgba(244, 242, 236, 0.4);
+  border: 1px solid rgba(241, 246, 251, 0.4);
   flex-shrink: 0;
 }
 .tseh-overlay .switch i {
@@ -1046,7 +1066,7 @@ html.tseh-lock body {
   left: 3px;
   width: 16px;
   height: 16px;
-  background: rgba(244, 242, 236, 0.6);
+  background: rgba(241, 246, 251, 0.6);
   transition:
     left 0.2s,
     background 0.2s;
@@ -1080,7 +1100,7 @@ html.tseh-lock body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border: 2px solid rgba(244, 242, 236, 0.3);
+  border: 2px solid rgba(241, 246, 251, 0.3);
   padding: 15px;
   font-family: var(--fd);
   font-size: 13px;
@@ -1131,7 +1151,7 @@ html.tseh-lock body {
   position: fixed;
   inset: 0;
   z-index: 50;
-  background: rgba(21, 22, 26, 0.7);
+  background: rgba(16, 35, 61, 0.7);
   border: none;
   animation: tseh-fadeIn 0.3s both;
 }
@@ -1191,7 +1211,7 @@ html.tseh-lock body {
   display: grid;
   place-items: center;
   background: transparent;
-  border: 1px solid rgba(244, 242, 236, 0.3);
+  border: 1px solid rgba(241, 246, 251, 0.3);
   color: var(--paper);
   transition: all 0.2s;
 }
@@ -1207,14 +1227,14 @@ html.tseh-lock body {
 }
 .tseh-drawer .item {
   position: relative;
-  border: 2px solid rgba(21, 22, 26, 0.15);
+  border: 2px solid rgba(16, 35, 61, 0.15);
   background: rgba(255, 255, 255, 0.6);
   padding: 16px 48px 16px 16px;
   margin-bottom: 12px;
   transition: border-color 0.2s;
 }
 .tseh-drawer .item:hover {
-  border-color: rgba(21, 22, 26, 0.5);
+  border-color: rgba(16, 35, 61, 0.5);
 }
 .tseh-drawer .item-title {
   font-family: var(--fd);
@@ -1312,7 +1332,7 @@ html.tseh-lock body {
 }
 .tseh-drawer .inp {
   width: 100%;
-  border: 2px solid rgba(21, 22, 26, 0.25);
+  border: 2px solid rgba(16, 35, 61, 0.25);
   background: rgba(255, 255, 255, 0.7);
   padding: 13px 16px;
   font-family: var(--fb);
@@ -1401,7 +1421,7 @@ html.tseh-lock body {
   height: 96px;
   display: grid;
   place-items: center;
-  border: 2px dashed rgba(21, 22, 26, 0.35);
+  border: 2px dashed rgba(16, 35, 61, 0.35);
   color: var(--muted);
 }
 .tseh-drawer .empty h3 {
@@ -1448,7 +1468,7 @@ html.tseh-lock body {
 }
 .tseh-drawer .done-num {
   margin-top: 16px;
-  border: 2px dashed rgba(21, 22, 26, 0.4);
+  border: 2px dashed rgba(16, 35, 61, 0.4);
   padding: 10px 20px;
   font-family: var(--fd);
   font-weight: 800;
@@ -1496,16 +1516,13 @@ html.tseh-lock body {
   max-width: 440px;
 }
 .tseh .proc-avatar {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   flex-shrink: 0;
-  display: grid;
-  place-items: center;
   background: var(--ink);
-  font-family: var(--fd);
-  font-weight: 900;
-  font-size: 17px;
-  color: var(--signal);
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid var(--signal);
 }
 .tseh .proc-card p:first-of-type {
   font-size: 14px;
@@ -1522,7 +1539,7 @@ html.tseh-lock body {
   flex-shrink: 0;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(21, 22, 26, 0.25);
+  border: 1px solid rgba(16, 35, 61, 0.25);
   color: var(--ink);
   transition: all 0.2s;
 }
@@ -1538,7 +1555,7 @@ html.tseh-lock body {
   grid-template-columns: 72px 1fr;
   gap: 20px;
   padding: 28px 0;
-  border-bottom: 2px solid rgba(21, 22, 26, 0.15);
+  border-bottom: 2px solid rgba(16, 35, 61, 0.15);
   transition: border-color 0.3s;
 }
 .tseh .step:hover {
@@ -1574,7 +1591,7 @@ html.tseh-lock body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid rgba(21, 22, 26, 0.25);
+  border: 1px solid rgba(16, 35, 61, 0.25);
   padding: 5px 10px;
   font-family: var(--fb);
   font-size: 12px;
@@ -1603,9 +1620,9 @@ html.tseh-lock body {
 }
 
 .tseh .cases {
-  background: rgba(236, 234, 222, 0.6);
-  border-top: 1px solid rgba(21, 22, 26, 0.15);
-  border-bottom: 1px solid rgba(21, 22, 26, 0.15);
+  background: rgba(227, 237, 247, 0.6);
+  border-top: 1px solid rgba(16, 35, 61, 0.15);
+  border-bottom: 1px solid rgba(16, 35, 61, 0.15);
 }
 .tseh .arrows {
   display: flex;
@@ -1708,14 +1725,14 @@ html.tseh-lock body {
   scroll-snap-align: start;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px dashed rgba(21, 22, 26, 0.4);
+  border: 2px dashed rgba(16, 35, 61, 0.4);
   padding: 24px;
   text-decoration: none;
   transition: all 0.3s;
 }
 .tseh .case-link:hover {
   border-color: var(--signal);
-  background: rgba(255, 77, 0, 0.05);
+  background: rgba(22, 211, 240, 0.05);
 }
 .tseh .case-link h3 {
   font-family: var(--fd);
@@ -1775,7 +1792,7 @@ html.tseh-lock body {
   background: var(--paper);
   color: var(--ink);
   padding: 24px;
-  box-shadow: 6px 8px 0 rgba(255, 77, 0, 0.85);
+  box-shadow: 6px 8px 0 rgba(22, 211, 240, 0.85);
   transition: transform 0.5s;
 }
 .tseh .rev::before {
@@ -1786,9 +1803,9 @@ html.tseh-lock body {
   width: 92px;
   height: 26px;
   transform: translateX(-50%) rotate(-4deg);
-  background: rgba(255, 77, 0, 0.22);
-  border-left: 1px dashed rgba(255, 77, 0, 0.5);
-  border-right: 1px dashed rgba(255, 77, 0, 0.5);
+  background: rgba(22, 211, 240, 0.22);
+  border-left: 1px dashed rgba(22, 211, 240, 0.5);
+  border-right: 1px dashed rgba(22, 211, 240, 0.5);
 }
 .tseh .rev:hover {
   transform: rotate(0) scale(1.02) !important;
@@ -1799,7 +1816,7 @@ html.tseh-lock body {
   color: var(--signal);
 }
 .tseh .stars .off {
-  color: rgba(21, 22, 26, 0.25);
+  color: rgba(16, 35, 61, 0.25);
 }
 .tseh .rev blockquote {
   margin-top: 16px;
@@ -1809,7 +1826,7 @@ html.tseh-lock body {
 }
 .tseh .rev figcaption {
   margin-top: 20px;
-  border-top: 1px solid rgba(21, 22, 26, 0.15);
+  border-top: 1px solid rgba(16, 35, 61, 0.15);
   padding-top: 16px;
 }
 .tseh .rev-name {
@@ -1837,7 +1854,7 @@ html.tseh-lock body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px dashed rgba(244, 242, 236, 0.3);
+  border: 2px dashed rgba(241, 246, 251, 0.3);
   padding: 24px;
   text-decoration: none;
   color: var(--paper);
@@ -1847,7 +1864,7 @@ html.tseh-lock body {
 }
 .tseh .rev-tg:hover {
   border-color: var(--signal);
-  background: rgba(244, 242, 236, 0.05);
+  background: rgba(241, 246, 251, 0.05);
 }
 .tseh .rev-tg .big {
   font-family: var(--fd);
@@ -1914,7 +1931,7 @@ html.tseh-lock body {
   border-top: 2px solid var(--ink);
 }
 .tseh .acc {
-  border-bottom: 2px solid rgba(21, 22, 26, 0.15);
+  border-bottom: 2px solid rgba(16, 35, 61, 0.15);
   transition: border-color 0.3s;
 }
 .tseh .acc.open {
@@ -1953,7 +1970,7 @@ html.tseh-lock body {
   flex-shrink: 0;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(21, 22, 26, 0.3);
+  border: 1px solid rgba(16, 35, 61, 0.3);
   transition: all 0.3s;
 }
 .tseh .acc.open .acc-x {
@@ -2024,7 +2041,7 @@ html.tseh-lock body {
   color: var(--ink);
 }
 .tseh .cta .trust {
-  color: rgba(21, 22, 26, 0.8);
+  color: rgba(16, 35, 61, 0.8);
 }
 .tseh .cta .trust svg {
   color: var(--ink);
@@ -2034,7 +2051,24 @@ html.tseh-lock body {
   background: var(--ink);
   color: var(--paper);
   padding: 32px;
-  box-shadow: 10px 12px 0 rgba(21, 22, 26, 0.35);
+  box-shadow: 10px 12px 0 rgba(16, 35, 61, 0.35);
+}
+.tseh .cta-card {
+  position: relative;
+}
+.tseh .cta-neira {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .tseh .cta-neira {
+    display: block;
+    position: absolute;
+    right: -55px;
+    bottom: 0;
+    width: 110px;
+    filter: drop-shadow(0 8px 24px rgba(16, 35, 61, 0.4));
+    pointer-events: none;
+  }
 }
 .tseh .cta-card .k {
   font-family: var(--fd);
@@ -2061,7 +2095,7 @@ html.tseh-lock body {
   justify-content: center;
   gap: 10px;
   margin-top: 12px;
-  border: 1px solid rgba(244, 242, 236, 0.3);
+  border: 1px solid rgba(241, 246, 251, 0.3);
   padding: 14px;
   font-family: var(--fd);
   font-size: 13px;
@@ -2111,7 +2145,7 @@ html.tseh-lock body {
 .tseh .foot-grid {
   display: grid;
   gap: 40px;
-  border-top: 1px solid rgba(244, 242, 236, 0.15);
+  border-top: 1px solid rgba(241, 246, 251, 0.15);
   margin-top: 40px;
   padding: 40px 0 48px;
 }
@@ -2130,7 +2164,7 @@ html.tseh-lock body {
 .tseh .foot-grid a {
   font-size: 14px;
   font-weight: 600;
-  color: rgba(244, 242, 236, 0.8);
+  color: rgba(241, 246, 251, 0.8);
   text-decoration: none;
   transition: color 0.2s;
   display: inline-flex;
@@ -2154,7 +2188,7 @@ html.tseh-lock body {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 12px;
-  border-top: 1px solid rgba(244, 242, 236, 0.15);
+  border-top: 1px solid rgba(241, 246, 251, 0.15);
   padding: 20px 0;
   font-size: 12px;
   font-weight: 600;

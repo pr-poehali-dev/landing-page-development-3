@@ -47,7 +47,7 @@ const CartDrawer = ({ cart, total, presetComment, onClose, onRemove, onClear }: 
           <p>Менеджер свяжется в течение рабочего часа (пн–пт, 10:00–19:00 мск), подтвердит состав работ и пришлёт договор. Цена зафиксирована.</p>
           <div className="done-actions">
             <button className="btn btn-ink" onClick={() => { onClear(); onClose(); }}>Вернуться на сайт</button>
-            <a className="btn btn-ghost" href="https://t.me/tseh_buro" target="_blank" rel="noreferrer">Написать в телеграм</a>
+            <a className="btn btn-ghost" href="https://t.me/neuro_tseh" target="_blank" rel="noreferrer">Написать в телеграм</a>
           </div>
         </div>
       );
